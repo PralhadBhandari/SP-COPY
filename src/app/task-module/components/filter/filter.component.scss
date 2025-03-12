@@ -1,0 +1,203 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+// .overflow {
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+//     white-space: nowrap;
+//     width: 100%;
+//     align-items: center;
+// }
+.liitemSpan {
+    padding-bottom: 6px;
+    text-overflow: ellipsis;
+    // overflow: auto;
+    overflow-y: scroll;
+    white-space: nowrap;
+}
+
+#favInp {
+    width: 285px !important;
+    height: 27px !important;
+    background-color: white;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.liitem {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+p {
+    margin: 0px 0px;
+}
+
+.header {
+    color: white;
+    background-color: #3dcd58;
+}
+
+.span {
+    padding-bottom: 5px;
+}
+
+.list-container {
+    flex-wrap: wrap;
+    align-items: center;
+    height: 9rem;
+}
+
+.accordion-button {
+    pointer-events: none;
+}
+
+.accordion-button::after {
+    pointer-events: all;
+}
+
+#card {
+    height: fit-content;
+    margin: 0px;
+    padding: 0px;
+}
+
+.favorite-item {
+    margin-bottom: 0;
+}
+
+.search {
+    width: "100%"
+}
+
+.liitem:hover {
+    background-color: #f1f8f9;
+}
+
+nb-accordion {
+    box-shadow: none;
+    border-bottom: 1px solid #EDF1F7;
+}
+
+#searchcard {
+    content-visibility: auto;
+    height: 50px;
+}
+
+#type {
+    height: 50px;
+    width: 100px;
+    color: #3dcd58;
+}
+
+#pop {
+    display: inline-block;
+}
+
+#one {
+    position: relative;
+    left: 1180px;
+    width: 40px;
+    color: #3dcd58;
+}
+
+.save {
+    color: #00C752;
+}
+
+.save-history {
+    color: #00C752;
+    margin-right: 5px;
+}
+
+#favOppfilterSearch {
+    position: relative;
+    left: 215px;
+}
+
+#HistOppfilterSearch {
+    position: relative;
+    left: 330px;
+}
+
+#liItem {
+    list-style: none;
+}
+
+#opp_names {
+    height: 125px;
+    padding-top: 0px;
+}
+
+#anchor {
+    text-decoration: none;
+    color: black;
+}
+
+#anchor:hover {
+    color: green;
+    border-bottom: 1px solid green;
+}
+
+.liitemSpan {
+    // padding-bottom: 6px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.maincard {
+    height: 14.1rem;
+    width: 30rem;
+}
+
+.layheader {
+    background-color: #f1f8f9;
+}
+
+.layCol {
+    background-color: white;
+}
+
+.laycardheader {
+    height: 3.5rem;
+    background-color: #f1f8f9;
+}
+
+.laycardbody {
+    padding: 3px 19px;
+    background-color: #f1f8f9;
+}
+
+#favInp {
+    width: 410px;
+    height: 28px;
+}
+
+#histInp {
+    width: 410px;
+    height: 28px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #565656;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #939393;
+}
+
+.marginSearch {
+    margin-left: 10px;
+}

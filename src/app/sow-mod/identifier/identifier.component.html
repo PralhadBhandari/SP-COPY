@@ -1,0 +1,94 @@
+<nb-layout>
+    <nb-layout-column [nbSpinner]="loading" nbSpinnerStatus="primary" style="  box-shadow: rgb(209, 209, 218) 0px 3px 3px;  " class="p-1 m-0 h-100 bg-white">
+        <div class=" container-fluid bg-white" style="border-bottom: 1.7px solid #edf1f7">
+            <div style="height: 2.5rem;" class="row">
+                <div class="col-md-4 col-12 align" style="display: flex">
+                    <h4 style="color: #3dcd58">Identifier Details</h4>
+                </div>
+                <div class="col-md-5 d-none d-md-block"></div>
+                <div class="col-md-3 col-12 align">
+                    <div class="d-flex flex-md-row-reverse flex-column">
+                        <div class="p-1">
+                            <button (click)="onPublish('Publish');onReload()" size="small" nbButton status="success" style="background-color: #3dcd58; color: white">Publish</button>
+                        </div>
+                        <div class="p-1">
+                            <button (click)="onPublish('Save As Draft');onReload()" size="small" nbButton status="success" style="background-color: #3dcd58; color: white">Save As Draft</button>
+                        </div>
+                        <div class="p-1">
+                            <h4 style="color: #3dcd58" class="font-weight">DRAFT</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Location -->
+        <div>
+            <div class="m-3">
+                <h5 style="color: #3dcd58">Location </h5>
+            </div>
+            <nb-card class="p-3 m-3 d-flex green-border-card">
+                <div class="d-flex align-items-center justify-content">
+                    <div class="col-md-4">
+                        <div class="col-md-1"> Country </div>
+                        <b> UNITED STATES </b>
+                    </div>
+
+                    <div class="col-md-4" *ngFor="let item of office let i=index">
+                        <label>Office  </label>
+                        <nb-select fullWidth [(ngModel)]="item.list_ID" status="primary" placeholder="Office">
+                            <nb-option *ngFor="let option of item.list_Options" [value]="option.id">{{ option.value }}</nb-option>
+                        </nb-select>
+                    </div>
+                </div>
+            </nb-card>
+        </div>
+
+        <!-- Other -->
+
+        <div>
+            <div class="m-3">
+                <h5 style="color: #3dcd58">Other </h5>
+            </div>
+
+            <nb-card class="p-3 m-3 d-flex green-border-card ">
+                <div class="" style="display: flex; flex-wrap: wrap;">
+                    <div class="row" *ngFor="let item of identifiers; let i = index">
+                        <table>
+                            <td style="width:25rem" class="pe-4 pb-3 ps-4">
+                                <label>{{ item.list_Name.substring(4) }}</label>
+                                <nb-select fullWidth [(ngModel)]="item.list_ID " status="primary" [placeholder]="item.list_Name.substring(4)">
+                                    <nb-option *ngFor="let item of item.list_Options" [value]="item.id">{{ item.value }}</nb-option>
+                                </nb-select>
+                            </td>
+                        </table>
+                    </div>
+
+                    <div class="col-md-3 pe-4 pb-3 ps-3" style="width: 24.3rem;">
+                        <label>Payment Terms</label>
+                        <input nbInput [ngModel]="selectedValue.paymentTerms" (ngModelChange)="onInputChange($event,'paymentTerms')" fullWidth placeholder="Payment Terms">
+                    </div>
+
+                    <div class="col-md-4 pe-3 pb-3 ps-1" style="width: 23.3rem;">
+                        <label>Proposal Specialist  </label>
+                        <input nbInput [(ngModel)]="selectedValue.proposalSpecialist" (ngModelChange)="onInputChange($event,'proposalSpecialist')" fullWidth placeholder="Proposal Specialist">
+                    </div>
+                </div>
+
+                <div class="row ">
+
+                    <div class="col-md-4 pe-4 pb-3 ps-4" style="width: 25.2rem;">
+                        <label>Customer Sales Executive   </label>
+                        <input nbInput [(ngModel)]=" selectedValue.customerSalesExecutive" (ngModelChange)="onInputChange($event,'customerSalesExecutive')" fullWidth placeholder="Customer Sales Executive">
+                    </div>
+
+                    <div class="col-md-4 pe-4 pb-3 ps-1" style="width: 23.6rem;">
+                        <label>Regional Sales Manager  </label>
+                        <input nbInput [(ngModel)]="selectedValue.regionalSalesManager " (ngModelChange)="onInputChange($event,'regionalSalesManager')" fullWidth placeholder="Regional Sales Manager">
+                    </div>
+                </div>
+            </nb-card>
+        </div>
+    </nb-layout-column>
+
+</nb-layout>

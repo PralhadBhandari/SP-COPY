@@ -1,0 +1,133 @@
+<!-- <app-navbar> </app-navbar>
+<app-sp-menu></app-sp-menu> -->
+
+<div class="container-fluid m-0">
+    <div class="row m-0">
+        <div style="height: 10rem" class="col searchbar bgImage"></div>
+    </div>
+</div>
+
+<table class="row">
+    <td class="col-md-3 col-sm-12 components me-4" style="border-right: solid rgb(234, 234, 234) 1px; height: 28.3rem">
+        <app-filter class="m-0 p-0"></app-filter>
+    </td>
+    <td class="col-md-4 col-sm-12 components ms-5 mt-3">
+        <div class="myFav cardShadow" style="
+        height: 14.3rem;
+        width: 29rem;
+        overflow-y: auto;
+        background-color: rgb(240 240 240);
+      ">
+
+            <div class="myFavHeader ps-3 pb-4 pt-3" style="height: 54px !important;">
+                <div class="row" style="position: sticky">
+                    <div *ngIf="!favouritetoggleFilterSearch" class="defaultt">
+                        <table>
+                            <td>
+                                <b>My Favourite Opportunities</b>
+                            </td>
+                            <td>
+                                <nb-icon style="margin-left: 1.8rem" icon="funnel-outline" id="favOppfilterSearch" class="secondary text-center pointer" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to Filter Search" (click)="favouriteFilterSearch(); $event.preventDefault()"></nb-icon>
+                            </td>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div *ngIf="favouritetoggleFilterSearch">
+                        <table>
+                            <td>
+                                <input autocomplete="off" id="favInp" status="success" nbInput fullWidth type="text" [(ngModel)]="searchInput" placeholder="Filter Search" (input)="change($event)" />
+                            </td>
+                            <td>
+                                <nb-icon class="secondary pointer ms-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to Close" icon="close-outline" (click)="favouriteFilterSearch(); $event.preventDefault()"></nb-icon>
+                            </td>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="myFavBody ps-3">
+                <li id="liItem" *ngFor="let item of favouriteList">
+                    <div class="liitemSpan" *ngIf="
+              searchInput === '' ||
+              item.id_Opp
+                .toLowerCase()
+                .includes(searchInput.toLowerCase().trim()) ||
+              item.opp_name
+                .toLowerCase()
+                .includes(searchInput.toLowerCase().trim())
+            ">
+                        <span class="opp_name">
+              <nb-icon [icon]="item.isfavorite ? 'bookmark' : 'bookmark-outline'" id="demo" class="save-history pointer"
+                (click)="unfavopp(item)"></nb-icon>
+              <a id="anchor" (click)="selectopp(item)" routerLink="#" class="secondary" data-bs-toggle="tooltip"
+                data-bs-placement="top" title="{{ item.opp_name }}">
+                {{ item.id_Opp }} {{ item.opp_name }}
+              </a>
+            </span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </td>
+    <td class="col-md-4 col-sm-12 components me-5 mt-3">
+        <div class="myFav cardShadow p-3" style="
+        height: 14.3rem;
+        width: 29rem;
+        overflow-y: scroll;
+        background-color: rgb(240 240 240);
+      ">
+            <div class="myFavHeader pb-4 pe-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div *ngIf="!historyToggleFilterSearch" class="defaultt">
+                            <table>
+                                <td>
+                                    <b>My History</b>
+                                </td>
+                                <td class="ps-5">
+                                    <nb-icon icon="funnel-outline" id="hisOppfilterSearch" class="secondary pointer" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to Filter Search" (click)="historyFilterSearch(); $event.preventDefault()"></nb-icon>
+                                </td>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div *ngIf="historyToggleFilterSearch">
+                        <table>
+                            <td>
+                                <input autocomplete="off" id="favInp" status="success" nbInput fullWidth type="text" [(ngModel)]="historysearchInput" placeholder="Filter Search" (input)="historyChange($event)" />
+                            </td>
+                            <td>
+                                <nb-icon class="secondary pointer ms-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to Close" icon="close-outline" (click)="historyFilterSearch(); $event.preventDefault()"></nb-icon>
+                            </td>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="myFavBody">
+                <li id="liItem" *ngFor="let item of historyList">
+                    <div class="liitemSpan" *ngIf="
+              historysearchInput === '' ||
+              item.id_Opp
+                .toLowerCase()
+                .includes(historysearchInput.toLowerCase().trim()) ||
+              item.opp_name
+                .toLowerCase()
+                .includes(historysearchInput.toLowerCase().trim())
+            ">
+                        <!-- tolowercase is pipe  -->
+                        <span>
+              <nb-icon [icon]="item.isfavorite ? 'bookmark' : 'bookmark-outline'" id="demo" class="save-history pointer"
+                (click)="unfavHistory(item)"></nb-icon>
+              <a id="anchor" routerLink="#" class="secondary" data-bs-toggle="tooltip" data-bs-placement="top"
+                title="{{ item.opp_name }}" (click)="selectopp(item)">
+                {{ item.id_Opp }} {{ item.opp_name }}
+              </a>
+            </span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </td>
+</table>

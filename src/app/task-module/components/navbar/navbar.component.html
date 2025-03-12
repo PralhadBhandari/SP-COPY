@@ -1,0 +1,21 @@
+<div class="navbar d-flex align-items-center justify-content-center" style="background-color: #3dcd58; width: 100%; position: fixed;   z-index: 10; ">
+    <div class="col-md-2">
+        <img style="height: 5rem ; width:fit-content" src="https://www.se.com/ww/en/assets/wiztopic/6377672a9a2b2dda9503c02d/SE-logo-Life-is-On-png.png" alt="LOGO" />
+    </div>
+    <div class="col-md-7">
+        <h4 style=" color: white ">PA Global Operations</h4>
+        <h4 (click)="changesowToggleFlag();changeConfigToggleFlag()" data-bs-toggle="tooltip" data-bs-placement="top" title="Go to Opportunity" class="curserPointer " id="solutionPortal " style="color: white ">Solution Portal
+            <span class="text-white pointer " data-bs-toggle="tooltip" data-bs-placement="top" title="Go to Opportunity" *ngIf="linkAddress=='/sow/sow-summary'  || linkAddress== '/sow/sow-test'">  <b class="ms-2 me-2" >></b>  SOW </span>
+            <span class="text-white pointer " data-bs-toggle="tooltip" data-bs-placement="top" title="Go to Opportunity" *ngIf="linkAddress=='/sow/identifiers'">  <b class="ms-2 me-2" >></b> Identifiers </span>
+            <span class="text-white pointer " data-bs-toggle="tooltip" data-bs-placement="top" title="Go to Opportunity" *ngIf="linkAddress=='/configurator'">  <b class="ms-2 me-2" >></b>  Configurator </span></h4>
+    </div>
+    <div class="col-md-2 ps-5">
+        <nb-icon icon="log-out-outline" class="pointer" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to Logout" routerLink="/" type="button " (click)="onLogout()" style="color: white; margin-left: 4rem;"></nb-icon>
+        <span class="text-white pointer"> &nbsp; Logout</span>
+    </div>
+    <div class="col-md-1">
+        <p class="text-white">
+            <nb-icon icon="person-outline"></nb-icon> {{user.name | uppercase}}
+        </p>
+    </div>
+</div>

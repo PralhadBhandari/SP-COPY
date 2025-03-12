@@ -1,0 +1,448 @@
+{
+    "code": 200,
+    "root": [{
+            "filter_Name": "opp_market_segment",
+            "filter_Display_Name": "Market Segment",
+            "togglefindSearch": false,
+            "filter_List": [{
+                    "id": "I9Z",
+                    "value": "Industry Other EU segments",
+                    "favorite": true,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "IT1",
+                    "value": "IT Equipment and Professional Services",
+                    "favorite": true,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "BD6",
+                    "value": "LifeSciences",
+                    "favorite": true,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "ID1",
+                    "value": "Machinery",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "PW3",
+                    "value": "Marine",
+                    "favorite": true,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "E44",
+                    "value": "Offshore topside Oil & Gas (offshore platforms)",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "E4Z",
+                    "value": "Oil and Gas Other (Exploration, Drilling)",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "E45",
+                    "value": "Onshore Production Oil & Gas",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "D23",
+                    "value": "Other Financial Services",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "I48",
+                    "value": "Other food products",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "I13",
+                    "value": "Packaging Machinery",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "I91",
+                    "value": "Paper, Wood & Related Products Manufacturing",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "I91",
+                    "value": "Paper, Wood, Printing & Publishing ",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "E27",
+                    "value": "Passenger vessels",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "I61",
+                    "value": "Personal Care & Cosmetics",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "I14",
+                    "value": "Textile Machinery",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "I90",
+                    "value": "Textile Manufacturing",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "I4B",
+                    "value": "Tobacco",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "E08",
+                    "value": "Transmission",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "E42",
+                    "value": "Transportation and Distribution Pipelines Oil & Gas",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                }
+            ]
+        },
+        {
+            "filter_Name": "opp_country",
+            "filter_Display_Name": "Country",
+            "filter_List": [
+
+                {
+                    "id": "92",
+                    "value": "Armenia",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "136",
+                    "value": "Aruba",
+                    "favorite": true,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "4",
+                    "value": "AUSTRALIA",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "3",
+                    "value": "AUSTRIA",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "93",
+                    "value": "Azerbaijan",
+                    "favorite": true,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "145",
+                    "value": "Bahamas (the)",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "7",
+                    "value": "BAHRAIN",
+                    "favorite": true,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "94",
+                    "value": "Bangladesh",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "249",
+                    "value": "Holy See (the)",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "106",
+                    "value": "Honduras",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "33",
+                    "value": "HONG KONG",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "187",
+                    "value": "Jamaica",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "42",
+                    "value": "JAPAN",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "186",
+                    "value": "Jersey",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "113",
+                    "value": "Macao, China",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "114",
+                    "value": "Macedonia",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "115",
+                    "value": "Madagascar",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "211",
+                    "value": "Malawi",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "54",
+                    "value": "MALAYSIA",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "210",
+                    "value": "Maldives",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "205",
+                    "value": "Mali",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "209",
+                    "value": "Malta",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "204",
+                    "value": "Marshall Islands (the)",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "61",
+                    "value": "PHILIPPINES",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "222",
+                    "value": "Pitcairn",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "76",
+                    "value": "TURKMENISTAN",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "240",
+                    "value": "Turks and Caicos Islands (the)",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "80",
+                    "value": "UKRAINE",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "1",
+                    "value": "UNITED ARAB EMIRATES",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "31",
+                    "value": "UNITED KINGDOM",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "258",
+                    "value": "Zimbabwe",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                }
+            ]
+        },
+        {
+            "filter_Name": "opp_region",
+            "filter_Display_Name": "Region",
+            "filter_List": [{
+                    "id": "4",
+                    "value": "APAC",
+                    "favorite": true,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "6",
+                    "value": "CHINA",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "7",
+                    "value": "EEC",
+                    "favorite": true,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "3",
+                    "value": "EURA",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "2",
+                    "value": "LATAM",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "1",
+                    "value": "ME",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                }
+            ]
+        },
+        {
+            "filter_Name": "a",
+            "filter_Display_Name": "By Status",
+            "filter_List": [{
+                    "id": "1",
+                    "value": "Won",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "2",
+                    "value": "Open",
+                    "favorite": true,
+                    "security": false,
+                    "count": 0
+                },
+                {
+                    "id": "3",
+                    "value": "Closed",
+                    "favorite": false,
+                    "security": false,
+                    "count": 0
+                }
+            ]
+        }
+    ],
+    "messages": "Filter list Retrieved Successfully"
+}

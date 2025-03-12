@@ -1,0 +1,11 @@
+[
+
+  {"opportunity" : "Apple", "status": true, "isFav":true},
+  {"opportunity" : "Banana", "status": false, "isFav":false },
+  {"opportunity": "Chiku", "status": false, "isFav":false},
+  {"opportunity":" Peru", "status": false, "isFav":false},
+  {"opportunity": "Pomogranete", "status": true, "isFav":true},
+  {"opportunity": "Jackfruit", "status": true, "isFav":true}
+
+]
+

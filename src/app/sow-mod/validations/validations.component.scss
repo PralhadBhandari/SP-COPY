@@ -1,0 +1,121 @@
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 30px;
+}
+
+.toggle-input {
+    display: none;
+}
+
+.toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33px;
+    height: 21px;
+    border-radius: 17px;
+    background-color: #3dcd58;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.toggle-label:before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 16px;
+    height: 15px;
+    border-radius: 46%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.toggle-input:checked+.toggle-label {
+    background-color: #3dcd58;
+}
+
+.toggle-input:checked+.toggle-label:before {
+    transform: translateX(12px);
+}
+
+
+
+
+
+
+.hoggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 30px;
+}
+
+.hoggle-input {
+  display: none;
+}
+
+.hoggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 33px;
+  height: 21px;
+  border-radius: 17px;
+  background-color: #3dcd58;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.hoggle-label:before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 15px;
+  border-radius: 46%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.hoggle-input:checked+.hoggle-label {
+  background-color: #3dcd58;
+}
+
+.hoggle-input:checked+.hoggle-label:before {
+  transform: translateX(12px);
+}
+
+.smallFont {
+    font-size: smaller;
+    font-weight: 700;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: large;
+}
+
+.grey {
+    color: rgb(187, 183, 183);
+}
+
+.border-right {
+    border-right: #e7e3e3 solid 1.5px;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+nb-icon {
+    color: #3dcd58;
+}

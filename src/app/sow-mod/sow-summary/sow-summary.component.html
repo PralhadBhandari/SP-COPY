@@ -1,0 +1,169 @@
+<nb-layout class="" style="z-index: -10;" style="padding-top: 80px;">
+
+    <nb-layout-column style="  box-shadow: rgb(209, 209, 218) 0px 3px 3px;  " class="p-1 h-100 bg-white">
+        <div class=" container" style="border-bottom: 1.7px solid #edf1f7">
+            <div style="height: 2.5rem" class="row">
+                <div class="col-md-4 col-12 align" style="display: flex">
+                    <h4 style="color: #3dcd58">SOW Details ></h4>
+                    <h5 style="padding: 1px">SOW Summary </h5>
+                </div>
+                <div class="col-md-8 col-12 align"></div>
+            </div>
+        </div>
+
+        <!-- Product -->
+        <div>
+            <div class="m-2">
+                <h5 style="color: #3dcd58">Product</h5>
+            </div>
+            <nb-card class="p-3 m-1 green-border-card">
+                <div class="container text-center">
+                    <div class="row row cols-2 row-cols-lg-5 ">
+                        <div class="col">
+                            Strategic family
+                            <div class="div"> <b>{{parselocalData.product.strategic_family}} </b></div>
+                        </div>
+                        <div class="col-md-1">
+                            Family
+                            <div class="div"> <b>{{parselocalData.product.family}}</b></div>
+                        </div>
+                        <div class="col-md-1">
+                            GDP
+                            <div class="div"> <b>{{parselocalData.product.gdp_family}}</b></div>
+                        </div>
+                        <div class="col-md-1">
+                            Product Line
+                            <div class="div"> <b>{{parselocalData.product.procuct_line}} </b></div>
+                        </div>
+                        <div class="col-md-1">
+                            Offer Owner
+                            <div class="div"> <b>{{parselocalData.product.offer_owner}} </b></div>
+                        </div>
+                    </div>
+                </div>
+            </nb-card>
+        </div> <br>
+
+        <div class="container-fluid text-center">
+            <div class="row d-flex justify-content-between">
+                <!-- I/O -->
+                <div class="col">
+                    <div class="pt-2">
+                        <div>
+                            <h5 class="text-start" style="color: #3dcd58">I/O</h5>
+                        </div>
+                        <nb-card class="p-3 green-border-card">
+                            <div class="container text-center">
+                                <div class="row row-cols-2 row-cols-lg-5 ">
+                                    <div class="col-3">
+                                        <div>Total </div>
+                                        <div> {{parselocalData.io.ai }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nb-card>
+                    </div>
+                </div>
+                <!-- Cabinets -->
+                <div class="col">
+                    <div class="pt-2">
+                        <div>
+                            <h5 class="text-start" style="color: #3dcd58">Cabinets</h5>
+                        </div>
+                        <nb-card class="p-3 green-border-card">
+                            <div class="container text-center">
+                                <div class="row row-cols-3 row-cols-lg-5 ">
+                                    <div class="col-3">
+                                        <div>Total </div>
+                                        <div>{{parselocalData.cabinet}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nb-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Party -->
+        <div>
+            <div class="m-2">
+                <h5 style="color: #3dcd58">Third Party</h5>
+            </div>
+
+            <nb-card class="p-3 m-1 green-border-card">
+                <div class="row g-0 text-center">
+                    <div class="div"></div>
+                    <div class="col-sm-6 col-md-4 text-start ps-2">Third Party
+                        <div class="div"><b>{{parselocalData.third_party.disableSelect}}</b></div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 text-center">Vendor Name
+                        <div class="div"> <b>{{parselocalData.third_party.vendor_name}}</b></div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 text-end pe-3">Vendor Product
+                        <p class>{{parselocalData.third_party.vendor_product}}</p>
+                    </div>
+                </div>
+            </nb-card>
+        </div> <br>
+        <!-- I/O Breakdown -->
+        <div>
+            <div class="m-2">
+                <h5 style="color: #3dcd58">I/O Breakdown</h5>
+            </div>
+            <nb-card class="p-3 m-1 green-border-card">
+                <div class="container text-center">
+                    <div class="row row cols-2 row-cols-lg-4  ">
+                        <div class="col">
+                            Total I/O
+                            <div class="div"> <b>{{parselocalData.cabinate.value}} </b></div>
+                        </div>
+                        <div class="col-md-1">
+                            HW I/O
+                            <div class="div"> <b>{{parselocalData.HW}}</b></div>
+                        </div>
+                        <div class="col-md-1">
+                            Intelligent I/O
+                            <div class="div"> <b>{{parselocalData.Intelligent}}</b></div>
+                        </div>
+                        <div class="col-md-1">
+                            Serial I/O
+                            <div class="div"> <b>{{parselocalData.Serial}} </b></div>
+                        </div>
+
+                    </div>
+                </div>
+            </nb-card>
+        </div> <br>
+        <!-- Cabinet Breakdown -->
+        <div>
+            <div class="m-2">
+                <h5 style="color: #3dcd58">Cabinet Breakdown</h5>
+            </div>
+            <nb-card class="p-3 m-1 green-border-card">
+                <div class="container text-center">
+                    <div class="row row cols-2 row-cols-lg-4  ">
+                        <div class="col">
+                            Total I/O
+                            <div class="div"> <b>{{parselocalData.cabinate.value}} </b></div>
+                        </div>
+                        <div class="col-md-1">
+                            HW I/O
+                            <div class="div"> <b>{{parselocalData.HW}}</b></div>
+                        </div>
+                        <div class="col-md-1">
+                            Intelligent I/O
+                            <div class="div"> <b>{{parselocalData.Intelligent}}</b></div>
+                        </div>
+                        <div class="col-md-1">
+                            Serial I/O
+                            <div class="div"> <b>{{parselocalData.Serial}} </b></div>
+                        </div>
+
+                    </div>
+                </div>
+            </nb-card>
+        </div>
+
+    </nb-layout-column>
+</nb-layout>

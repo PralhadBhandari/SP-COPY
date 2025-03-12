@@ -1,0 +1,32 @@
+<nb-layout>
+    <nb-layout-column class="m-0 p-0 bg-white">
+        <div class="m-0  row bg-success">
+            <div class="col">
+                <p class="text-white fs-1 text p-4 "> Amazing Animals </p>
+            </div>
+        </div>
+        <div class="main-container pt-3 ps-4">
+            <input class="bg-white" id="inputAnimal" style="display: inline-block; width: 40rem;" [ngModel]="inputAnimalName" type="text" nbInput fullWidth status="success" placeholder="Search by Animal Name" (keydown.enter)="demoFunction($event)">
+            <button style="border-radius: 0.5rem; " class="m-3 p-2 round" (click)="demoFunction($event)"> Search </button>
+            <div *ngIf=" flag === false &&  filteredAnimalList.length === 0">
+                Welcome to Our Learning App, Search your favourite animal
+            </div>
+            <div *ngIf=" flag === true && filteredAnimalList.length === 0">
+                Oops !!!, we don't have information about this animal
+            </div>
+            <div *ngIf="inputAnimalName != null">
+                <div *ngFor="let animal of filteredAnimalList">
+                    <div class="card border p-4 m-4 bg-light w-75">
+                        <h5 *ngIf="animal.name != null"> <span class="text-primary"> Name </span> : {{animal.name}} </h5>
+                        <h5 *ngIf="animal.taxonomy.scientific_name != null"> <span class="text-primary">  Scientific name </span> : {{animal.taxonomy.scientific_name}}</h5>
+                        <h5 *ngIf="animal.characteristics.habitat != null"> <span class="text-primary">  habitat </span> : {{animal.characteristics.habitat}}</h5>
+                        <h5 *ngIf="animal.characteristics.diet != null"> <span class="text-primary">  Diet </span> : {{animal.characteristics.diet}}</h5>
+                        <h5 *ngIf="animal.characteristics.lifespan != null"> <span class="text-primary"> Lifespan </span> : {{animal.characteristics.lifespan}}</h5>
+                        <h5 *ngIf="animal.characteristics.location != null"> <span class="text-primary">  Location </span>: {{animal.characteristics.location}}</h5>
+                        <h5> <span class="text-primary">   Description </span>: {{animal.name}}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nb-layout-column>
+</nb-layout>

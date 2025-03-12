@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0px;
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem!important;
+    height: 0.5rem!important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9fa0a4!important;
+    border-radius: .25rem!important;
+}
+
+::-webkit-scrollbar-track {
+    background: #f7f9fc;
+}

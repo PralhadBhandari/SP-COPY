@@ -1,0 +1,319 @@
+<nb-card>
+    <nb-card-header>
+        <div class="row m-0 p-0">
+            <div class="col-9">
+                <b style="color: #3dcd58;">Q-Data > </b>{{workData.title}}&nbsp;{{workData.description}}
+            </div>
+            <div class="col-3 text-end">
+                <div style="background-color:#3dcd58; color: white;" class="btn ">
+                    <b>Activate</b>
+                </div>
+            </div>
+        </div>
+    </nb-card-header>
+    <nb-card-body>
+        <div class="row m-0 p-0">
+            <div class="col-7">
+                <div class="row m-0 p-0">
+                    <div class="col-7 ">
+                        <b style="color: #3dcd58;" class="fs-5">Cost Summary</b>
+                    </div>
+                    <div class="col-5 d-flex">
+                        <div class="smallFont">Bid Cost(USD)</div>
+                        <div class="toggle-switch ms-2 me-2">
+                            <input (click)='toggleSwitch()' class="toggle-input" id="toggle" type="checkbox">
+                            <label class="toggle-label" for="toggle"></label>
+                        </div>
+                        <div class="smallFont">Business Cost(EUR)</div>
+                    </div>
+                </div>
+                <div class="costSummary card ">
+                    <div class="row  m-0 p-0 pt-2">
+                        <div class="col-4">
+                            <div></div>
+
+                        </div>
+                        <div class="col-2 text-end">
+                            <p class="smallFont  grey">Cost Breakdown (USD)</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="smallFont grey"> Global Contributin All (%)</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="smallFont grey">Global Contribution No Additional Cost (%) </p>
+                        </div>
+
+                    </div>
+                    <hr>
+                    <div class="row  m-0 p-0 pt-2 pb-2 smallFont" *ngFor="let item of workData.costSummary_Details">
+                        <div class="col-4">
+                            <div>
+                                <nb-icon *ngIf="item.bucketName == 'Bill of Materials'" icon="inbox-outline" class="me-1"></nb-icon>
+                                <nb-icon *ngIf="item.bucketName == 'Engineering'" icon="clock-outline" class="me-1"></nb-icon>
+                                <nb-icon *ngIf="item.bucketName == 'Resale'" icon="repeat-outline" class="me-1"></nb-icon>
+                                <nb-icon *ngIf="item.bucketName == 'Additional Costs'" icon="file-add-outline" class="me-1"></nb-icon>
+                                <nb-icon *ngIf="item.bucketName == 'Risks'" icon="alert-circle-outline" class="me-1"></nb-icon>
+                                {{item.bucketName}}
+                            </div>
+                        </div>
+                        <div class="col-2 text-end">
+                            <div *ngIf="bidToggleFlag == false" >{{item.bid_cost | number : '1.2-2'}}</div>
+                            <div *ngIf="bidToggleFlag == true" >{{item.business_cost | number : '1.2-2'}}</div>
+                        </div>
+                        <div class="col-3 text-end">
+                            <div *ngIf="bidToggleFlag == false">{{((item.bid_cost /bidCostTotal )* 100)| number : '1.2-2'}}</div>
+                            <div *ngIf="bidToggleFlag == true">{{((item.business_cost /businessCostTotal )* 100)| number : '1.2-2'}}</div>
+                        </div>
+                        <div class="col-3 text-end">
+                          <div *ngIf="bidToggleFlag == false">
+                            <div *ngIf="item.bucketName == 'Additional Costs'">N/A</div>
+                            <div *ngIf="item.bucketName != 'Additional Costs'">{{((item.bid_cost / bidCostTotalWithoutAC )* 100) | number : '1.2-2'}}</div>
+                          </div>
+                          <div *ngIf="bidToggleFlag == true">
+                            <div *ngIf="item.bucketName == 'Additional Costs'">N/A</div>
+                            <div *ngIf="item.bucketName != 'Additional Costs'">{{((item.business_cost / businessCostTotalWithoutAC )* 100) | number : '1.2-2'}}</div>
+                          </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row smallFont  pe-2 ps-3 pb-1">
+                        <div class="col-4 ps-4">
+                            <div>Total</div>
+                        </div>
+                        <div class="col-2 text-end">
+                           <div *ngIf="bidToggleFlag == false"> {{bidCostTotal | number : '1.2-2'}}</div>
+                           <div *ngIf="bidToggleFlag == true"> {{businessCostTotal | number : '1.2-2'}}</div>
+                        </div>
+                        <div class="col-3 text-end">
+                            <div  *ngIf="bidToggleFlag == false">{{bidtotalPercentage | number : '1.2-2'}}</div>
+                            <div  *ngIf="bidToggleFlag == true" >{{businesstotalPercentage | number : '1.2-2'}}</div>
+                        </div>
+                        <div class="col-3 text-end">
+                         <div  *ngIf="bidToggleFlag == false"> {{bidtotalPerExcludeAC | number : '1.2-2'}}</div>
+                         <div  *ngIf="bidToggleFlag == true"> {{businesstotalPerExcludeAC | number : '1.2-2'}}</div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 ">
+                <div class="row  m-0 p-0">
+                    <b style="color: #3dcd58;" class="fs-5 pb-2">Cost Summary</b>
+                </div>
+                <div class="costBreakdown card" style="height: 368px;">
+                    <!-- {{bidToggleFlag}} -->
+                    <canvas class="p-4" id="myBidChart"></canvas>
+                    <!-- <canvas class="p-4" id="mybusinessChart"></canvas> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="row sow" style="padding: 25px; padding-top: 35px;">
+            <div class="row  m-0 p-0">
+                <div class="col-9 ">
+                    <b style="color: #3dcd58;" class="fs-5">Scope Of Work</b>
+                </div>
+                <div class="col-3 d-flex">
+                    <div class="smallFont">Bid Cost(USD)</div>
+                    <div class="hoggle-switch ms-2 me-2">
+                        <input class="hoggle-input" id="hoggle" type="checkbox">
+                        <label class="hoggle-label" for="hoggle"></label>
+                    </div>
+                    <div class="smallFont">Business Cost(EUR)</div>
+                </div>
+            </div>
+
+            <div style="box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;" class="card">
+                <div class="row text-center border-bottom pt-3 pb-1">
+                    <div class="col-4 border-right ">
+                        <p class="bold" style="color: #3dcd58;">Included</p>
+                    </div>
+                    <div class="col-4 border-right">
+                        <p class="bold" style="color: rgb(221, 102, 28);">Option</p>
+                    </div>
+                    <div class="col-4">
+                        <p class="bold" style="color: rgb(242, 16, 16);">Excluded</p>
+                    </div>
+                </div>
+                <div class="row " *ngFor="let item of workData.sow_Details">
+                    <div class="col-4 border-right">
+                        <div class="card mt-2 mb-2 pt-2 pb-2 " *ngIf="item.sowStatus == 'Included'">
+                            <div>
+                                <div class="row m-0 p-0">
+                                    <b style="color: #3dcd58;" class="fs-5 smallFont">{{item.title}}</b>
+                                    <div>{{item.desc}}</div>
+                                </div>
+                            </div>
+                            <div class="row m-0  p-0">
+                                <div class="col-5">
+                                    <div class="row" *ngFor="let subItem of item.sowCostDetails ">
+                                        <div class="col-3">
+                                            <nb-icon *ngIf="subItem.bucketName == 'Bill of Materials'" icon="inbox-outline" class="me-1"></nb-icon>
+                                            <nb-icon *ngIf="subItem.bucketName == 'Engineering'" icon="clock-outline" class="me-1"></nb-icon>
+                                            <nb-icon *ngIf="subItem.bucketName == 'Resale'" icon="repeat-outline" class="me-1"></nb-icon>
+                                            <nb-icon *ngIf="subItem.bucketName == 'Risks'" icon="alert-circle-outline" class="me-1"></nb-icon>
+                                        </div>
+                                        <div class="col-9 text-end smallFont">
+                                            <div>{{subItem.bid_cost | number : '1.2-2'}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-7 ">
+                                    <div class="border">
+                                        <div class="row" *ngFor="let subItem of item.engineeringCostDetails ">
+                                            <div class="col-4 border-right smallFont">
+                                                {{subItem.type}}
+                                            </div>
+                                            <div class="col-4 border-right smallFont">
+                                                {{subItem.bid_cost | number : '1.2-2'}}
+                                            </div>
+                                            <div class="col-4 smallFont">
+                                              <!-- should update value of bidCostTotal for percentage for each type -->
+                                              <div *ngIf="subItem.bid_cost != 0" >
+                                                {{((subItem.bid_cost / item.enggbidTotalPrice )* 100)| number : '1.2-2'}}%
+                                              </div>
+                                              <div *ngIf="subItem.bid_cost == 0" >
+                                                {{0| number : '1.2-2'}}%
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <hr class="m-0 p-0">
+                                        <div class="row">
+                                            <div class="col-4 border-right smallFont">
+                                                Total
+                                            </div>
+                                            <div class="col-4 border-right smallFont">
+                                                <div>{{item.enggbidTotalPrice | number : '1.2-2'}}</div>
+                                            </div>
+                                            <div class="col-4 smallFont">
+                                              {{item.enggTotalPercentage | number : '1.2-2' }}%
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row p-0 m-0">
+                                <div class="col-7">
+                                    <div class="row m-0 p-0" style="padding-left: -10px;">
+                                        <div class="col-4 smallFont">
+                                            Total
+                                        </div>
+                                        <div class="col-8 text-end smallFont pe-5">
+                                          <div > {{item.bidTotalPrice | number : '1.2-2'}} </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 border-right">
+                        <div class="card mt-2 pt-2" *ngIf="item.sowStatus == 'Option'">
+                            <div>
+                                <div class="row  m-0 p-0">
+                                    <b style="color: #3dcd58;" class="fs-5 smallFont">{{item.title}}</b>
+                                    <div>{{item.desc}}</div>
+                                </div>
+                            </div>
+                            <div class="row m-0 p-0" *ngFor="let subItem of item.sowCostDetails ">
+                                <div class="col-5">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <nb-icon *ngIf="subItem.bucketName == 'Bill of Materials'" icon="inbox-outline" class="me-1"></nb-icon>
+                                            <nb-icon *ngIf="subItem.bucketName == 'Engineering'" icon="clock-outline" class="me-1"></nb-icon>
+                                            <nb-icon *ngIf="subItem.bucketName == 'Resale'" icon="repeat-outline" class="me-1"></nb-icon>
+                                            <nb-icon *ngIf="subItem.bucketName == 'Risks'" icon="alert-circle-outline" class="me-1"></nb-icon>
+                                        </div>
+                                        <div class="col-9 text-end smallFont">
+                                            <div>{{subItem.bid_cost | number : '1.2-2'}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-7 ">
+                                    <div class="border">
+                                        <div class="row">
+                                            <div class="col-4 border-right">
+                                                eng ty
+                                            </div>
+                                            <div class="col-4 border-right">
+                                                bid/bus
+                                            </div>
+                                            <div class="col-4">
+                                                perc
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-5">
+                                    <div class="row m-0 p-0">
+                                        <div class="col-5 smallFont">
+                                            Total
+                                        </div>
+                                        <div class="col-7 text-end smallFont">
+                                            <div>SUM</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card mt-2 pt-2" *ngIf="item.sowStatus == 'Excluded'">
+                            <div>
+                                <div class="row  m-0 p-0">
+                                    <b style="color: #3dcd58;" class="fs-5 smallFont">{{item.title}}</b>
+                                    <div>{{item.desc}}</div>
+                                </div>
+                            </div>
+                            <div class="row m-0 p-0" *ngFor="let subItem of item.sowCostDetails ">
+                                <div class="col-5">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <nb-icon *ngIf="subItem.bucketName == 'Bill of Materials'" icon="inbox-outline" class="me-1"></nb-icon>
+                                            <nb-icon *ngIf="subItem.bucketName == 'Engineering'" icon="clock-outline" class="me-1"></nb-icon>
+                                            <nb-icon *ngIf="subItem.bucketName == 'Resale'" icon="repeat-outline" class="me-1"></nb-icon>
+                                            <nb-icon *ngIf="subItem.bucketName == 'Risks'" icon="alert-circle-outline" class="me-1"></nb-icon>
+                                        </div>
+                                        <div class="col-9 text-end smallFont">
+                                            <div>{{subItem.bid_cost | number : '1.2-2'}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-7 ">
+                                    <div class="border">
+                                        <div class="row">
+                                            <div class="col-4 border-right">
+                                                eng ty
+                                            </div>
+                                            <div class="col-4 border-right">
+                                                bid/bus
+                                            </div>
+                                            <div class="col-4">
+                                                perc
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-5">
+                                    <div class="row m-0 p-0">
+                                        <div class="col-5 smallFont">
+                                            Total
+                                        </div>
+                                        <div class="col-7 text-end smallFont">
+                                            <div>SUM</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </nb-card-body>
+</nb-card>

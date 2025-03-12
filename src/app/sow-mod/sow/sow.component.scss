@@ -1,0 +1,81 @@
+nb-layout-column {
+    background-color: white;
+}
+
+.selectOpt {
+    padding: 0.5rem;
+    padding-bottom: 0rem;
+    border-radius: 0.5rem;
+    width: 30rem;
+}
+
+.row {
+    width: 100%;
+}
+
+#checkbox {
+    margin-right: 1.5rem;
+}
+
+.green-border-card {
+    border-radius: 15px;
+    border-top: 5px solid #3dcd58;
+    box-shadow: rgb(209, 209, 218) 0px 3px 3px;
+}
+
+table {
+    width: 100%;
+}
+
+.ioInput {
+    height: 2rem;
+}
+
+label {
+    font-size: 0.8rem;
+}
+// .links:hover{
+//   background-color: #3dcd58;
+// }
+.links:active{
+  cursor: pointer;
+  background-color: #3dcd58;
+
+}
+nb-accordion {
+  box-shadow: none !important;
+}
+
+nb-menu {
+  box-shadow: none !important;
+}
+
+// nb-accordion-item-body {
+//     padding-left: 1.25rem !important;
+// }
+// .nb-theme-default nb-menu .menu-item>.menu-items>.menu-item a.active {
+//     background-color: #3dcd58 !important;
+// }
+.ifActive:hover {
+  background-color: #3dcd58;
+}
+
+.linksClicked {
+  color: white;
+  background-color: #3dcd58;
+}
+
+p {
+  margin-bottom: 0px !important;
+  font-size: small;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+// .links:hover {
+//     color: white;
+//     background-color: #3dcd58;
+// }
+.pointer {
+  cursor: pointer;
+}

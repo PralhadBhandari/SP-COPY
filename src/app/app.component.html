@@ -1,0 +1,15 @@
+<!-- <nb-layout>
+    <nb-layout-column class="bg-white p-0">
+        <router-outlet></router-outlet>
+    </nb-layout-column>
+</nb-layout> -->
+
+<nb-layout>
+    <nb-layout-column class="bg-white p-0">
+        <!-- <h3>{{varpathname}}</h3> -->
+        <app-navbar *ngIf="varpathname != '/login' && varpathname != '/register'"></app-navbar>
+        <app-sp-menu *ngIf="varpathname != '/login' && varpathname != '/register' && varpathname != '/configurator' && varpathname != '/sow/boi'  && varpathname != '/sow/validations'  && varpathname != '/sow/identifiers' && varpathname != '/sow/sow-main/sow-test'&& varpathname != '/sow/sow-summary' && varpathname != '/sow/sow-test' "></app-sp-menu>
+        <router-outlet></router-outlet>
+        <!-- <h3>{{varpathname}}</h3> -->
+    </nb-layout-column>
+</nb-layout>

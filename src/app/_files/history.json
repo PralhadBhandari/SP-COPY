@@ -1,0 +1,95 @@
+{
+    "code": 200,
+    "root": [{
+            "opp_name": "ST JAMES PARISH I North SIS/F&G",
+            "created_on": "2023-08-05T06:55:07.533",
+            "id_Opp": "OP-19080",
+            "isfavorite": false
+        },
+        {
+            "opp_name": "Compact to UT-US Mag",
+            "created_on": "2023-08-05T06:55:07.533",
+            "id_Opp": "OP-03904",
+            "isfavorite": false
+        },
+        {
+            "opp_name": "Air handling-system-M340-NSK Services Optimized",
+            "created_on": "2023-08-03T11:50:01.397",
+            "id_Opp": "OP-22751",
+            "isfavorite": true
+        },
+        {
+            "opp_name": "Control Point",
+            "created_on": "2023-08-03T06:46:44.907",
+            "id_Opp": "OP-03649",
+            "isfavorite": true
+        },
+        {
+            "opp_name": "Quantum Graphite",
+            "created_on": "2023-08-03T06:14:31.837",
+            "id_Opp": "OP-03936",
+            "isfavorite": true
+        },
+        {
+            "opp_name": "Oil STEEL DYNAMICS INC",
+            "created_on": "2023-07-28T04:34:47.66",
+            "id_Opp": "OP-03638",
+            "isfavorite": false
+        },
+        {
+            "opp_name": "ICSS Ceyhan Polipropilen A.S",
+            "created_on": "2023-07-27T18:05:58.877",
+            "id_Opp": "OP-21096",
+            "isfavorite": false
+        },
+        {
+            "opp_name": "Edgecomb NC-Edgecombe Genco Cogentrix Complex Demo",
+            "created_on": "2023-07-27T18:05:41.7",
+            "id_Opp": "OP-03668",
+            "isfavorite": true
+        },
+        {
+            "opp_name": "Rio - SPIN",
+            "created_on": "2023-07-17T12:19:04.047",
+            "id_Opp": "OP-22090",
+            "isfavorite": false
+        },
+        {
+            "opp_name": "Idaho Power -IDAHO POWER",
+            "created_on": "2023-07-17T04:55:37.64",
+            "id_Opp": "OP-11013",
+            "isfavorite": false
+        },
+        {
+            "opp_name": "PRH200-0040069141 Vission Auto",
+            "created_on": "2023-07-16T14:54:20.033",
+            "id_Opp": "OP-20124",
+            "isfavorite": true
+        },
+        {
+            "opp_name": "Effluent  - Mumbai - ANI Integrated Distributed ",
+            "created_on": "2023-07-16T07:41:30.837",
+            "id_Opp": "OP-29484",
+            "isfavorite": false
+        },
+        {
+            "opp_name": "DG - Mumbai - WARTSILA",
+            "created_on": "2023-07-16T07:40:40.517",
+            "id_Opp": "OP-20010",
+            "isfavorite": true
+        },
+        {
+            "opp_name": "YANSAB - KSA - SECL - YANSAB",
+            "created_on": "2023-07-16T07:40:17.51",
+            "id_Opp": "OP-20560",
+            "isfavorite": false
+        },
+        {
+            "opp_name": "E-LILLY MANUF SERVICE WINDER_DUPLICATE OP-200220-9365",
+            "created_on": "2023-07-16T07:40:05.867",
+            "id_Opp": "OP-19031",
+            "isfavorite": true
+        }
+    ],
+    "messages": "Retrieved history data successfully from the Database"
+}

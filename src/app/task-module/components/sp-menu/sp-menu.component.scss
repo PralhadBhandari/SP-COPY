@@ -1,0 +1,33 @@
+.align {
+    display: flex;
+    align-items: space-between;
+    justify-content: space-between;
+}
+
+.links {
+    text-decoration: none;
+    color: black;
+    padding: 0.3rem;
+}
+
+.linksClicked:hover {
+    border-bottom: 5px solid #3dcd58;
+}
+
+.linksClicked {
+    color: #3dcd58;
+    // background-color: #d4ffdc;
+    border-bottom: 5px solid #3dcd58; // box-shadow: inset 0px 0px 4px 0px #3dcd58;
+}
+
+// .notClicked {
+//     background-color: white;
+// }
+.links:hover {
+    color: #3dcd58;
+    border-bottom: 5px solid #3dcd58;
+}
+
+.bold {
+    font-weight: bold;
+}

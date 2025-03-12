@@ -1,0 +1,45 @@
+{
+    "code": 200,
+    "root": [
+
+        {
+            "opp_name": "Air handling-system-M340-NSK Services Optimized",
+            "created_on": "2023-08-03T11:50:01.397",
+            "id_Opp": "OP-22751",
+            "isfavorite": true
+        },
+        {
+            "opp_name": "Control Point",
+            "created_on": "2023-08-03T06:46:44.907",
+            "id_Opp": "OP-03649",
+            "isfavorite": true
+        },
+        {
+            "opp_name": "Quantum Graphite",
+            "created_on": "2023-08-03T06:14:31.837",
+            "id_Opp": "OP-03936",
+            "isfavorite": true
+        },
+        {
+            "opp_name": "Edgecomb NC-Edgecombe Genco Cogentrix Complex Demo",
+            "created_on": "2023-07-27T18:05:41.7",
+            "id_Opp": "OP-03668",
+            "isfavorite": true
+        },
+        {
+            "opp_name": "welcomeGraphite",
+            "created_on": "2023-08-03T06:14:31.837",
+            "id_Opp": "OP-039",
+            "isfavorite": true
+        },
+        {
+            "opp_name": " bigCogentrix",
+            "created_on": "2023-07-27T18:05:41.7",
+            "id_Opp": "OP-1",
+            "isfavorite": true
+        }
+
+
+    ],
+    "messages": "Retrieved favOpportunity data successfully from the Database"
+}

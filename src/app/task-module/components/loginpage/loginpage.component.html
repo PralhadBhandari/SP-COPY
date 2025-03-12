@@ -1,0 +1,69 @@
+<!-- main app container -->
+
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+<nb-layout>
+    <nb-layout-column class=" layoutBackground d-flex align-center justify-content-center ">
+        <div class="row layoutBackground">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-12">
+                <nb-card style="width: fit-content; height: fit-content; width: 35rem; padding: 4rem; border-radius: 1rem;" size="small">
+                    <nb-card-body>
+
+                        <div class="row text-center ">
+                            <h2>WELCOME </h2>
+                        </div>
+                        <div class="row text-center ">
+                            <p class="text-success">We are here to provide you Solution Portal</p>
+                        </div>
+                        <form [formGroup]="loginForm" (ngSubmit)="setCurrentUserData()">
+                            <div class="row mt-3 mb-3 d-flex align-center justify-content-center">
+                                <nb-form-field>
+                                    <label>Email</label>
+                                    <input placeholder="Enter Email" type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" nbInput>
+                                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                        <div *ngIf="f.email.errors.required">Email is required</div>
+                                        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                                    </div>
+                                </nb-form-field>
+                            </div>
+                            <div class="row d-flex align-center justify-content-center ">
+
+                                <nb-form-field>
+                                    <label>Password</label>
+                                    <input [type]="getInputType()" placeholder="Enter password" type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" nbInput>
+
+                                    <nb-icon class="eyeButton" data-bs-toggle="tooltip" data-bs-placement="top" title="View pasword" *ngIf="f.password.value !==  '' && !(submitted && f.password.errors) " style="position: relative; top: 1.1rem;" role="button" nbSuffix (click)="toggleShowPassword()"
+                                        [icon]="showPassword ? 'eye-outline' : 'eye-off-2-outline'" pack="eva" [attr.aria-label]="showPassword ? 'hide password' : 'show password'">
+                                    </nb-icon>
+                                    <nb-icon class="eyeButton" data-bs-toggle="tooltip" data-bs-placement="top" title="View pasword" *ngIf="(submitted && f.password.errors) " style="position: relative; top: 0.4rem; right: 1.7rem;" role="button" nbSuffix (click)="toggleShowPassword()" [icon]="showPassword ? 'eye-outline' : 'eye-off-2-outline'"
+                                        pack="eva" [attr.aria-label]="showPassword ? 'hide password' : 'show password'">
+                                    </nb-icon>
+
+
+                                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                        <div *ngIf="f.password.errors.required">Password is required</div>
+                                        <div *ngIf="f.password.errors.minlength">Password must be 6 characters </div>
+                                    </div>
+                                </nb-form-field>
+                            </div>
+                            <div style="width: 10rem;" class="mt-5 row justify-content-center">
+                                <div class="col">
+                                    <button style="margin-left: 7rem; height: 3rem; width: 10rem;" id="button" class="col bg-primary" type="submit">Login  </button>
+                                </div>
+                            </div>
+
+                            <div class="row pt-4">
+                                <div class="col text-center">
+                                    <span>
+                                 Need an account?
+                                <a [routerLink]="['/register']">SIGN UP </a>
+                              </span>
+                                </div>
+                            </div>
+                        </form>
+                    </nb-card-body>
+                </nb-card>
+            </div>
+        </div>
+
+    </nb-layout-column>
+</nb-layout>

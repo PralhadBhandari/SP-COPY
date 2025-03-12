@@ -1,0 +1,176 @@
+<nb-layout [nbSpinner]="loading" nbSpinnerStatus="primary">
+
+    <nb-layout-column style=" box-shadow: rgb(209, 209, 218) 0px 3px 3px;  " class="p-1 h-100 bg-white">
+        <div class=" container-fluid  p-0 " style="border-bottom: 1.7px solid #edf1f7">
+            <div style="height: 2.5rem;" class="row">
+                <div class="col-md-4 col-12 align" style="display: flex">
+                    <h4 style="color: #3dcd58">SOW Details ></h4>
+                    <h5 style="padding: 1px">SOW Test </h5>
+                </div>
+                <div class="col-md-5 d-none d-md-block"></div>
+                <div class="col-md-3 col-12 align">
+                    <div class="d-flex flex-md-row-reverse flex-column">
+                        <div class="p-1">
+                            <button (click)="onPublish('Publish');onReload()" size="small" nbButton status="success" style="background-color: #3dcd58; color: white">Publish</button>
+                        </div>
+                        <div class="p-1">
+                            <button (click)="onPublish('Save As Draft');onReload()" size="small" nbButton status="success" style="background-color: #3dcd58; color: white">Save As Draft</button>
+                        </div>
+                        <div class="p-1">
+                            <h4 style="color: #3dcd58" class="font-weight">PUBLISHED</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product -->
+
+        <div>
+            <div class="m-3">
+                <h5 style="color: #3dcd58">Product</h5>
+            </div>
+
+            <nb-card class="p-3 m-3 green-border-card">
+                <div class=" row">
+                    <div class="col-md-4">
+                        <label> Offer Owner</label>
+                        <nb-select fullWidth [(ngModel)]="payload.product.offer_owner" status="primary" placeholder="Offer Owner" [disabled]="payload.third_party.disableSelect">
+                            <nb-option *ngFor="let item of sow_details.product.offer_owner; let i=index" [value]="item.node_name">{{item.node_name}}</nb-option>
+                        </nb-select>
+                    </div>
+                    <div class="col-md-4">
+                        <label> Product Line</label>
+                        <nb-select fullWidth [(ngModel)]="payload.product.procuct_line" status="primary" class="product" placeholder="Product Line" [disabled]="payload.third_party.disableSelect">
+                            <nb-option *ngFor="let item of sow_details.product.procuct_line" [value]="item.node_name">{{item.node_name}}</nb-option>
+                        </nb-select>
+                    </div>
+                    <div class="col-md-4">
+                        <label> Family</label>
+                        <nb-select fullWidth [(ngModel)]="payload.product.family" status="primary" placeholder="Family" [disabled]="payload.third_party.disableSelect">
+                            <nb-option *ngFor="let item of sow_details.product.family" [value]="item.node_name">{{item.node_name}}</nb-option>
+                        </nb-select>
+                    </div>
+                </div>
+                <br />
+
+                <div class=" row">
+                    <div class="col-md-4">
+                        <label> Strategic Family</label>
+                        <nb-select fullWidth [(ngModel)]="payload.product.strategic_family" status="primary" placeholder="Strategic Family" [disabled]="payload.third_party.disableSelect">
+                            <nb-option *ngFor="let item of sow_details.product.family" [value]="item.node_name">{{item.node_name}}</nb-option>
+                        </nb-select>
+                    </div>
+                    <div class="col-md-4">
+                        <label> GDP family</label>
+                        <nb-select fullWidth [(ngModel)]="payload.product.gdp_family" status="primary" placeholder="GDP family" [disabled]="payload.third_party.disableSelect">
+                            <nb-option *ngFor="let item of sow_details.product.gdp_family" [value]="item.node_name">{{item.node_name}}</nb-option>
+                        </nb-select>
+                    </div>
+                </div>
+            </nb-card>
+        </div>
+
+        <!-- Third Party -->
+
+        <div>
+            <div class="m-3">
+                <h5 style="color: #3dcd58">Third Party</h5>
+            </div>
+
+            <nb-card class="p-3 m-3 d-flex green-border-card">
+                <div class="d-flex align-items-center justify-content-between row">
+                    <p class="col-md-4">
+                        <nb-checkbox [(ngModel)]="payload.third_party.disableSelect">Third party</nb-checkbox>
+                    </p>
+
+                    <div class="col-md-4">
+                        <label>Vendor Name </label>
+                        <nb-select fullWidth [(ngModel)]="payload.third_party.vendor_name" status="primary" placeholder="Vendor Name" [disabled]="!payload.third_party.disableSelect">
+                            <nb-option value="{{sow_details.third_party.table_name}}">{{sow_details.third_party.table_name}}</nb-option>
+                        </nb-select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label>Vendor Product </label>
+                        <input nbInput fullWidth [(ngModel)]="payload.third_party.vendor_product" placeholder="Vendor Product" [disabled]="!payload.third_party.disableSelect">
+                    </div>
+                </div>
+            </nb-card>
+        </div>
+
+        <!-- I/O -->
+
+        <div>
+            <div class="m-3">
+                <h5 style="color: #3dcd58">I/O</h5>
+            </div>
+            <nb-card class="p-3 m-3 green-border-card text-center">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr class="text-center">
+                            <th>AI</th>
+                            <th>AO</th>
+                            <th>DI</th>
+                            <th>DO</th>
+                            <th>Universal</th>
+                            <th>Other</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of sow_details.io , let i = index">
+                            <td><input appAllownumbersonly [(ngModel)]="item.ai" nbInput fullWidth fieldSize="small" type="text"></td>
+                            <td><input appAllownumbersonly [(ngModel)]="item.ao" nbInput fullWidth fieldSize="small" type="text"></td>
+                            <td><input appAllownumbersonly [(ngModel)]="item.di" nbInput fullWidth fieldSize="small" type="text"></td>
+                            <td><input appAllownumbersonly [(ngModel)]="item.do" nbInput fullWidth fieldSize="small" type="text"></td>
+                            <td><input appAllownumbersonly [(ngModel)]="item.universal" nbInput fullWidth fieldSize="small" type="text"></td>
+                            <td><input appAllownumbersonly [(ngModel)]="item.other" nbInput fullWidth fieldSize="small" type="text"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </nb-card>
+        </div>
+
+
+        <!-- Cabinets -->
+
+        <div>
+            <div class="m-3">
+                <h5 style="color: #3dcd58">Cabinets</h5>
+            </div>
+            <nb-card class="p-3 m-3 green-border-card ">
+                <div class="col-md-7 ps-3">
+                    <div class="row">
+
+                        <div class="col-md-11 ">
+                            <div class="row p-2">
+                                <div class="col-md-2 ">Type</div>
+                                <div class="col-md-10 text-center">Total</div>
+                            </div>
+                            <div class="row p-1">
+                                <div class="col-md-2">I/O</div>
+                                <div class="col-md-10"><input appAllownumbersonly [(ngModel)]="payload.cabinate[0].value" nbInput status="basic" class="ioInput" fullWidth type="text"></div>
+                            </div>
+                            <div class="row p-1">
+                                <div class="col-md-2">Control</div>
+                                <div class="col-md-10"><input appAllownumbersonly [(ngModel)]="payload.cabinate[1].value" nbInput status="basic" class="ioInput" fullWidth type="text"></div>
+                            </div>
+                            <div class="row p-1">
+                                <div class="col-md-2">Supervisory</div>
+                                <div class="col-md-10"><input appAllownumbersonly [(ngModel)]="payload.cabinate[2].value" nbInput status="basic" class="ioInput" fullWidth type="text"></div>
+                            </div>
+                            <div class="row p-1">
+                                <div class="col-md-2">Enterprise</div>
+                                <div class="col-md-10"><input appAllownumbersonly [(ngModel)]="payload.cabinate[3].value" nbInput status="basic" class="ioInput" fullWidth type="text"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nb-card>
+        </div>
+
+        <!-- </nb-layout-column>
+</nb-layout> -->
+
+    </nb-layout-column>
+</nb-layout>

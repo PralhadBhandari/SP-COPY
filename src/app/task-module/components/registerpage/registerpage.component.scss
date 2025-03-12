@@ -1,0 +1,54 @@
+.main {
+    height: auto;
+    width: 28rem;
+    padding: 2rem 4rem;
+    margin-left: 35rem;
+    margin-top: 2rem;
+    // box-shadow: rgba(0, 0, 0, 0.35) 20px 20px 37px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    border-radius: 1rem;
+}
+
+.cardSize {
+    height: fit-content;
+    width: fit-content;
+}
+
+input {
+    margin: 0.5rem 0rem 0rem 0.2rem;
+}
+
+label {
+    margin-top: 0.5rem;
+}
+
+.register {
+    font-size: xx-large;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #3dcd58;
+}
+
+.backcolor {
+    background-color: #9affaa;
+    // filter: grayscale(0%);
+    // opacity: 0.9;
+}
+
+button {
+    margin-top: 1rem;
+    background-color: #3dcd58;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.6rem 2rem;
+    font-size: large;
+    font-weight: 600;
+}
+
+.error {
+    font-size: 0.2rem;
+}
+
+.eyeButton {
+    color: black;
+}

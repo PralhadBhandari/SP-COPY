@@ -1,0 +1,756 @@
+{
+    "code": 200,
+    "root": {
+        "qDataId": 205,
+        "title": "DY Q-Data 26th & 27th OCT test",
+        "description": "Test  Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test ",
+        "isSelected": false,
+        "bid_currCode": "USD",
+        "business_currCode": "EUR",
+        "costSummary_Details": [{
+                "bucketName": "Bill of Materials",
+                "bid_cost": 0,
+                "business_cost": 0,
+                "engineeringCostDetails": []
+            },
+            {
+                "bucketName": "Engineering",
+                "bid_cost": 0,
+                "business_cost": 0,
+                "engineeringCostDetails": [{
+                        "type": "BU",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "type": "EEC",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "type": "NON BU",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    }
+                ]
+            },
+            {
+                "bucketName": "Resale",
+                "bid_cost": 47789.22785977833,
+                "business_cost": 44737.02545483001,
+                "engineeringCostDetails": []
+            },
+            {
+                "bucketName": "Additional Costs",
+                "bid_cost": 20000,
+                "business_cost": 40000,
+                "engineeringCostDetails": []
+            },
+            {
+                "bucketName": "Risks",
+                "bid_cost": 0,
+                "business_cost": 0,
+                "engineeringCostDetails": []
+            }
+        ],
+        "sow_Details": [{
+                "sow_id": 281,
+                "title": "DY SOW TEST 26th &27th' OCT ",
+                "desc": "test ",
+                "sowStatus": "Included",
+                "sowCostDetails": [{
+                        "bucketName": "Bill of Materials",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "bucketName": "Engineering",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "bucketName": "Resale",
+                        "bid_cost": 47789.22785977833,
+                        "business_cost": 44737.02545483001
+                    },
+                    {
+                        "bucketName": "Risks",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    }
+                ],
+                "engineeringCostDetails": [{
+                        "type": "BU",
+                        "bid_cost": 2550,
+                        "business_cost": 0
+                    },
+                    {
+                        "type": "EEC",
+                        "bid_cost": 450,
+                        "business_cost": 0
+                    },
+                    {
+                        "type": "NON BU",
+                        "bid_cost": 4066,
+                        "business_cost": 0
+                    }
+                ],
+                "sow_version": {
+                    "soW_id": 281,
+                    "id_version": 35,
+                    "created_by": "SESA728557",
+                    "created_on": "2023-11-02T04:49:16.377",
+                    "updated_by": null,
+                    "updated_on": null,
+                    "submit_by": null,
+                    "submit_on": null,
+                    "description": "Added via configurator",
+                    "approved": false,
+                    "sesa_user_name": null
+                }
+            },
+            {
+                "sow_id": 269,
+                "title": "SOW 17- 10",
+                "desc": "Desc",
+                "sowStatus": "Excluded",
+                "sowCostDetails": [{
+                        "bucketName": "Bill of Materials",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "bucketName": "Engineering",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "bucketName": "Resale",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "bucketName": "Risks",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    }
+                ],
+                "engineeringCostDetails": [{
+                        "type": "BU",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "type": "EEC",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "type": "NON BU",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    }
+                ],
+                "sow_version": {
+                    "soW_id": 269,
+                    "id_version": 12,
+                    "created_by": "SESA728557",
+                    "created_on": "2023-10-20T05:40:20.697",
+                    "updated_by": null,
+                    "updated_on": null,
+                    "submit_by": "SESA728557",
+                    "submit_on": "2023-10-20T05:40:20.697",
+                    "description": "Added via configurator",
+                    "approved": true,
+                    "sesa_user_name": null
+                }
+            },
+            {
+                "sow_id": 277,
+                "title": "Sow p 20 oct",
+                "desc": "testing on dev",
+                "sowStatus": "Excluded",
+                "sowCostDetails": [{
+                        "bucketName": "Bill of Materials",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "bucketName": "Engineering",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "bucketName": "Resale",
+                        "bid_cost": 5847.530897796465,
+                        "business_cost": 5474.060794416
+                    },
+                    {
+                        "bucketName": "Risks",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    }
+                ],
+                "engineeringCostDetails": [{
+                        "type": "BU",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "type": "EEC",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "type": "NON BU",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    }
+                ],
+                "sow_version": {
+                    "soW_id": 277,
+                    "id_version": 37,
+                    "created_by": "SESA728557",
+                    "created_on": "2023-11-02T04:49:16.253",
+                    "updated_by": null,
+                    "updated_on": null,
+                    "submit_by": "SESA728557",
+                    "submit_on": "2023-11-02T04:49:16.253",
+                    "description": "Added via configurator",
+                    "approved": true,
+                    "sesa_user_name": null
+                }
+            },
+            {
+                "sow_id": 278,
+                "title": "SOW DY 20th' OCT TEST",
+                "desc": "test",
+                "sowStatus": "Excluded",
+                "sowCostDetails": [{
+                        "bucketName": "Bill of Materials",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "bucketName": "Engineering",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "bucketName": "Resale",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "bucketName": "Risks",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    }
+                ],
+                "engineeringCostDetails": [{
+                        "type": "BU",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "type": "EEC",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "type": "NON BU",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    }
+                ],
+                "sow_version": {
+                    "soW_id": 278,
+                    "id_version": 17,
+                    "created_by": "SESA728557",
+                    "created_on": "2023-11-01T06:23:39.717",
+                    "updated_by": null,
+                    "updated_on": null,
+                    "submit_by": "SESA728557",
+                    "submit_on": "2023-11-01T06:23:39.717",
+                    "description": "Added via configurator",
+                    "approved": true,
+                    "sesa_user_name": null
+                }
+            },
+            {
+                "sow_id": 280,
+                "title": "sow pratiksha 26 oct",
+                "desc": "testing",
+                "sowStatus": "Excluded",
+                "sowCostDetails": [{
+                        "bucketName": "Bill of Materials",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "bucketName": "Engineering",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "bucketName": "Resale",
+                        "bid_cost": 26.17467216161823,
+                        "business_cost": 24.502948199999995
+                    },
+                    {
+                        "bucketName": "Risks",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    }
+                ],
+                "engineeringCostDetails": [{
+                        "type": "BU",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "type": "EEC",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "type": "NON BU",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    }
+                ],
+                "sow_version": {
+                    "soW_id": 280,
+                    "id_version": 25,
+                    "created_by": "SESA728557",
+                    "created_on": "2023-11-02T04:49:16.297",
+                    "updated_by": null,
+                    "updated_on": null,
+                    "submit_by": "SESA728557",
+                    "submit_on": "2023-11-02T04:49:16.297",
+                    "description": "Added via configurator",
+                    "approved": true,
+                    "sesa_user_name": null
+                }
+            },
+            {
+                "sow_id": 283,
+                "title": "Sow Pratiksha 27 oct",
+                "desc": "testing",
+                "sowStatus": "Excluded",
+                "sowCostDetails": [{
+                        "bucketName": "Bill of Materials",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "bucketName": "Engineering",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "bucketName": "Resale",
+                        "bid_cost": 4810471.105589692,
+                        "business_cost": 4503235.937017889
+                    },
+                    {
+                        "bucketName": "Risks",
+                        "bid_cost": 67586.5,
+                        "business_cost": 63269.885418
+                    }
+                ],
+                "engineeringCostDetails": [{
+                        "type": "BU",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "type": "EEC",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "type": "NON BU",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    }
+                ],
+                "sow_version": {
+                    "soW_id": 283,
+                    "id_version": 18,
+                    "created_by": "SESA728557",
+                    "created_on": "2023-11-02T04:51:12.333",
+                    "updated_by": null,
+                    "updated_on": null,
+                    "submit_by": "SESA728557",
+                    "submit_on": "2023-11-02T04:51:12.333",
+                    "description": "Added via configurator",
+                    "approved": true,
+                    "sesa_user_name": null
+                }
+            },
+            {
+                "sow_id": 284,
+                "title": "Sow p 30 oct",
+                "desc": "testing",
+                "sowStatus": "Excluded",
+                "sowCostDetails": [{
+                        "bucketName": "Bill of Materials",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "bucketName": "Engineering",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "bucketName": "Resale",
+                        "bid_cost": 7706.200000000001,
+                        "business_cost": 7214.0204184
+                    },
+                    {
+                        "bucketName": "Risks",
+                        "bid_cost": 6107,
+                        "business_cost": 5716.958124
+                    }
+                ],
+                "engineeringCostDetails": [{
+                        "type": "BU",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "type": "EEC",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "type": "NON BU",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    }
+                ],
+                "sow_version": {
+                    "soW_id": 284,
+                    "id_version": 20,
+                    "created_by": "SESA728557",
+                    "created_on": "2023-11-02T04:51:12.373",
+                    "updated_by": null,
+                    "updated_on": null,
+                    "submit_by": "SESA728557",
+                    "submit_on": "2023-11-02T04:51:12.373",
+                    "description": "Added via configurator",
+                    "approved": true,
+                    "sesa_user_name": null
+                }
+            },
+            {
+                "sow_id": 286,
+                "title": "DY SOW 1st NOV ",
+                "desc": "tesd",
+                "sowStatus": "Excluded",
+                "sowCostDetails": [{
+                        "bucketName": "Bill of Materials",
+                        "bid_cost": 529907,
+                        "business_cost": 496062.89972399996
+                    },
+                    {
+                        "bucketName": "Engineering",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "bucketName": "Resale",
+                        "bid_cost": 29727.394176248647,
+                        "business_cost": 27828.764965
+                    },
+                    {
+                        "bucketName": "Risks",
+                        "bid_cost": 6472284613,
+                        "business_cost": 6058912739.336916
+                    }
+                ],
+                "engineeringCostDetails": [{
+                        "type": "BU",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "type": "EEC",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "type": "NON BU",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    }
+                ],
+                "sow_version": {
+                    "soW_id": 286,
+                    "id_version": 11,
+                    "created_by": "SESA728557",
+                    "created_on": "2023-11-02T04:51:12.41",
+                    "updated_by": null,
+                    "updated_on": null,
+                    "submit_by": "SESA728557",
+                    "submit_on": "2023-11-02T04:51:12.41",
+                    "description": "Added via configurator",
+                    "approved": true,
+                    "sesa_user_name": null
+                }
+            },
+            {
+                "sow_id": 287,
+                "title": "sow pratiksha 1 nov",
+                "desc": "testing",
+                "sowStatus": "Excluded",
+                "sowCostDetails": [{
+                        "bucketName": "Bill of Materials",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "bucketName": "Engineering",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "bucketName": "Resale",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "bucketName": "Risks",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    }
+                ],
+                "engineeringCostDetails": [{
+                        "type": "BU",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "type": "EEC",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "type": "NON BU",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    }
+                ],
+                "sow_version": {
+                    "soW_id": 287,
+                    "id_version": 1,
+                    "created_by": "SESA728557",
+                    "created_on": "2023-11-01T06:35:03.877",
+                    "updated_by": null,
+                    "updated_on": null,
+                    "submit_by": "SESA728557",
+                    "submit_on": "2023-11-01T06:36:16.53",
+                    "description": "Added via configurator",
+                    "approved": true,
+                    "sesa_user_name": null
+                }
+            },
+            {
+                "sow_id": 288,
+                "title": "SOW 1 nov",
+                "desc": "DESC",
+                "sowStatus": "Excluded",
+                "sowCostDetails": [{
+                        "bucketName": "Bill of Materials",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "bucketName": "Engineering",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "bucketName": "Resale",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "bucketName": "Risks",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    }
+                ],
+                "engineeringCostDetails": [{
+                        "type": "BU",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "type": "EEC",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "type": "NON BU",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    }
+                ],
+                "sow_version": {
+                    "soW_id": 288,
+                    "id_version": 8,
+                    "created_by": "SESA728557",
+                    "created_on": "2023-11-02T06:24:21.747",
+                    "updated_by": null,
+                    "updated_on": null,
+                    "submit_by": "SESA728557",
+                    "submit_on": "2023-11-02T06:24:21.747",
+                    "description": "Added via configurator",
+                    "approved": true,
+                    "sesa_user_name": null
+                }
+            },
+            {
+                "sow_id": 289,
+                "title": "Sow pratiksha 2 nov ",
+                "desc": "taaaaa",
+                "sowStatus": "Excluded",
+                "sowCostDetails": [{
+                        "bucketName": "Bill of Materials",
+                        "bid_cost": 4798.468592036166,
+                        "business_cost": 4492
+                    },
+                    {
+                        "bucketName": "Engineering",
+                        "bid_cost": 886609.542470367,
+                        "business_cost": 829983.5642118696
+                    },
+                    {
+                        "bucketName": "Resale",
+                        "bid_cost": 638449.06,
+                        "business_cost": 597672.59543592
+                    },
+                    {
+                        "bucketName": "Risks",
+                        "bid_cost": 57192,
+                        "business_cost": 53539.261344
+                    }
+                ],
+                "engineeringCostDetails": [{
+                        "type": "BU",
+                        "bid_cost": 635444.004009177,
+                        "business_cost": 594859.4663611185
+                    },
+                    {
+                        "type": "EEC",
+                        "bid_cost": 251165.53846119044,
+                        "business_cost": 235124.09785075104
+                    },
+                    {
+                        "type": "NON BU",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    }
+                ],
+                "sow_version": {
+                    "soW_id": 289,
+                    "id_version": 14,
+                    "created_by": "SESA714741",
+                    "created_on": "2023-11-02T06:34:58.5",
+                    "updated_by": null,
+                    "updated_on": null,
+                    "submit_by": "SESA714741",
+                    "submit_on": "2023-11-02T06:34:58.5",
+                    "description": "Added via configurator",
+                    "approved": true,
+                    "sesa_user_name": null
+                }
+            },
+            {
+                "sow_id": 290,
+                "title": "SOW nik",
+                "desc": "some desc",
+                "sowStatus": "Excluded",
+                "sowCostDetails": [{
+                        "bucketName": "Bill of Materials",
+                        "bid_cost": 529907,
+                        "business_cost": 496062.89972399996
+                    },
+                    {
+                        "bucketName": "Engineering",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "bucketName": "Resale",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "bucketName": "Risks",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    }
+                ],
+                "engineeringCostDetails": [{
+                        "type": "BU",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "type": "EEC",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    },
+                    {
+                        "type": "NON BU",
+                        "bid_cost": 0,
+                        "business_cost": 0
+                    }
+                ],
+                "sow_version": {
+                    "soW_id": 290,
+                    "id_version": 4,
+                    "created_by": "SESA714741",
+                    "created_on": "2023-11-02T06:37:02.403",
+                    "updated_by": null,
+                    "updated_on": null,
+                    "submit_by": "SESA714741",
+                    "submit_on": "2023-11-02T06:37:02.403",
+                    "description": "Added via configurator",
+                    "approved": true,
+                    "sesa_user_name": null
+                }
+            }
+        ],
+        "qData_Version": [{
+            "qData_id": 205,
+            "id_version": 5,
+            "created_by": "SESA714741",
+            "created_on": "2023-11-02T06:37:25.86",
+            "updated_by": null,
+            "updated_on": null,
+            "submit_by": "SESA714741",
+            "submit_on": "2023-11-02T06:37:25.86",
+            "description": "Added via configurator",
+            "sesa_user_name": "",
+            "approved": true
+        }],
+        "qdata_Selected_Version": {
+            "containerID": 1,
+            "id_version": 193,
+            "created_by": "SESA728557",
+            "created_on": "2023-11-02T06:37:09.037",
+            "updated_by": null,
+            "updated_on": null,
+            "submit_by": "SESA728557",
+            "submit_on": "2023-11-02T06:37:09.037",
+            "description": "Added via configurator",
+            "approved": true
+        }
+    },
+    "messages": "QDATA 205 Details Data Retrieved Successfully"
+}

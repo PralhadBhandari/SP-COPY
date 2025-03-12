@@ -1,0 +1,45 @@
+<div class="spMenu d-flex justify-content-center" style="padding-top: 80px;">
+    <div class="sp-items d-flex justify-content-between">
+        <div class="links px-3 bold manuItem pointer" [ngClass]="{'linksClicked':menuLink == '/home' }" data-bs-toggle="tooltip" data-bs-placement="top" title="Go to Home" (click)="changeSowToggleFlag() ;changeConfigToggleFlag()" routerLinkActive="linksClicked"
+            routerLink="/home">Home</div>
+        <div class="links px-3 bold manuItem pointer" [ngClass]="{'linksClicked':menuLink == '/opportunities' }" data-bs-toggle="tooltip" data-bs-placement="top" title="Go to Opportunity" (click)="changeSowToggleFlag() ;changeConfigToggleFlag()" routerLinkActive="linksClicked"
+            routerLink="/opportunities">Opportunity</div>
+        <div class="links px-3 bold manuItem pointer" [ngClass]="{'linksClicked':menuLink == '/sow/identifiers' }" data-bs-toggle="tooltip" data-bs-placement="top" title="Go to Configurator" (click)="changeSowToggleFlag();goToConfig()" routerLinkActive="linksClicked"
+            routerLink="/configurator">Configurator</div>
+        <div class="links px-3 bold manuItem pointer" [ngClass]="{'linksClicked':menuLink == '/sow/sow-test' }" data-bs-toggle="tooltip" data-bs-placement="top" title="Go to SOW" (click)="goToSowPage() ;changeConfigToggleFlag()" routerLinkActive="linksClicked"
+            routerLink="/sow/sow-test">SOW</div>
+        <div class="links px-3 bold manuItem pointer" [ngClass]="{'linksClicked':menuLink == '/about' }" data-bs-toggle="tooltip" data-bs-placement="top" title="Go to About Us" (click)="changeSowToggleFlag() ;changeConfigToggleFlag()" routerLinkActive="linksClicked"
+            routerLink="/about">About Us</div>
+        <div class="links px-3 bold manuItem pointer" [ngClass]="{'linksClicked':menuLink == '/contact' }" data-bs-toggle="tooltip" data-bs-placement="top" title="Go to Contact Us" (click)="changeSowToggleFlag() ;changeConfigToggleFlag()" routerLinkActive="linksClicked"
+            routerLink="/contact">Contact Us</div>
+    </div>
+</div>
+
+<!--
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse  d-flex align-items-center justify-content-center" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link links active" aria-current="page" (click)="changeSowToggleFlag()" routerLink="/home">A</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link links active" aria-current="page" (click)="changeSowToggleFlag()" routerLink="/home">Opportunity</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link links active" aria-current="page" (click)="changeSowToggleFlag()" routerLink="/home">Configurator</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link links active" aria-current="page" (click)="changeSowToggleFlag()" routerLink="/home">SOW</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link links active" aria-current="page" (click)="changeSowToggleFlag()" routerLink="/home">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link links active" aria-current="page" (click)="changeSowToggleFlag()" routerLink="/home">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav> -->

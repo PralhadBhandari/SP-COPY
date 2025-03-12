@@ -1,0 +1,79 @@
+<div class="row">
+    <div class="col-md-8">
+        <div>
+            <div style=" box-shadow: rgb(209, 209, 218) 0px 3px 3px; " class="p-1 h-100 bg-white">
+                <div>
+                    <div class="m-0 p-1">
+                        <h5 style="color: #3dcd58">Product Types</h5>
+                    </div>
+                    <nb-card class="card p-3 m-3  text-center">
+                        <table class="table table-borderless">
+                            <thead>
+                                <tr class="text row">
+                                    <div class="col-2 me-3 ms-3 ">Market Group</div>
+                                    <div class="col-2 me-2">Quantity</div>
+                                    <div class="col-2 me-2">TotalNetPrice </div>
+                                    <div class="col-2 me-2">XferNetPrice </div>
+                                    <div class="col-2 me-2">GrandTotal </div>
+                                </tr>
+                            </thead>
+                            <hr class="solid">
+
+                            <tbody>
+                                <ng-container *ngFor="let item of marketGroupDetails">
+                                    <nb-accordion>
+                                        <nb-accordion-item>
+                                            <nb-accordion-item-header style="height: 1.8rem;   box-shadow: #eae6e6 0px 1px 1px;">
+                                                <table class="table table-borderless">
+                                                    <tr class="text-center row">
+                                                        <div class="col-2 me-0 ">{{ item.marketGroupName }}</div>
+                                                        <div class="col-2 me-3 ">{{ item.quantity }}</div>
+                                                        <div class="col-2 me-4 ">{{ item.totalNetPrice_bid }} </div>
+                                                        <div class="col-2 me-4 ">{{ item.xferTotalNetPrice_bid }} </div>
+                                                        <div class="col-2 me-2 ">{{ item.grandTotal_bid.toFixed(2) }} </div>
+                                                    </tr>
+                                                </table>
+                                            </nb-accordion-item-header>
+                                            <hr class="solid">
+
+                                            <nb-accordion-item-body>
+                                                <table class="table table-borderless">
+                                                    <thead>
+                                                        <tr class="text-center">
+                                                            <th>Description</th>
+                                                            <th>Product </th>
+                                                            <th>Quantity</th>
+                                                            <th>TotalNetPrice </th>
+                                                            <th>XferNetPrice </th>
+                                                            <th>GrandTotal </th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <ng-container *ngFor="let lineItem of item.lineItem">
+                                                        <tr class="text-center">
+
+                                                            <td>{{ lineItem.description }} </td>
+                                                            <td>{{ lineItem.productType }} </td>
+                                                            <td>{{ lineItem.quantity }} </td>
+                                                            <td>{{ lineItem.totalNetPrice_bid }} </td>
+                                                            <td>{{ lineItem.xferNetTotal_bid }} </td>
+                                                            <td>{{ lineItem.grandTotal_bid.toFixed(2) }} </td>
+                                                        </tr>
+                                                    </ng-container>
+
+                                                </table>
+                                            </nb-accordion-item-body>
+                                        </nb-accordion-item>
+                                    </nb-accordion>
+                                </ng-container>
+                            </tbody>
+                        </table>
+                    </nb-card>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <app-chart [dataFromParent]="Boi"></app-chart>
+    </div>
+</div>

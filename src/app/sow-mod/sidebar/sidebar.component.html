@@ -1,0 +1,36 @@
+<div class="row m-0 pt-3">
+    <div class="col-10 m-0">
+        <p>SOW</p>
+    </div>
+    <div class="col-2 m-0">
+        <nb-icon class="pointer" (click)="changeIcon()" [icon]="sowClick ? 'arrow-ios-upward-outline' : 'arrow-ios-downward-outline'"></nb-icon>
+    </div>
+    <div *ngIf="sowClick == true " class="selectMenu m-0 p-0">
+        <p class="links pointer row m-0 pt-1 pb-1 ps-5 links" [ngClass]="{'active-link':menuLink=='/sow/sow-test'}" routerLink="/sow/sow-test" routerLinkActive="active-link">SOW TEST</p>
+        <p class="links pointer row m-0 pt-1 pb-1 ps-5 links" [ngClass]="{'active-link':menuLink=='/sow/sow-summary'}" routerLink="/sow/sow-summary" routerLinkActive="active-link">SOW SUMMARY</p>
+        <p class="links pointer row m-0 pt-1 pb-1 ps-5 links" [ngClass]="{'active-link':menuLink=='/sow/validations'}" routerLink="/sow/validations" routerLinkActive="active-link">SUMMARY & VALIDATOIN</p>
+    </div>
+</div>
+<div class="row m-0 pt-2">
+    <div class="col-10 m-0">
+        <p>IDENTIFIERS</p>
+    </div>
+    <div class="col-2 m-0">
+        <nb-icon class="pointer" (click)="changeIcons()" [icon]="identifierClick ? 'arrow-ios-upward-outline' : 'arrow-ios-downward-outline'"></nb-icon>
+    </div>
+    <div *ngIf=" identifierClick == true " class="selectMenu m-0 p-0">
+        <p class="links pointer row m-0 pt-1 pb-1 ps-5 links" [ngClass]="{'active-link':menuLink=='/sow/identifiers'}" routerLink="/sow/identifiers" routerLinkActive="active-link">IDENTIFIER DETAILS</p>
+    </div>
+</div>
+<div class="row m-0 pt-2">
+    <div class="col-10 m-0">
+        <p>BOI</p>
+    </div>
+    <div class="col-2 m-0">
+        <nb-icon class="pointer" (click)="boiIcon()" [icon]="boiclicked ? 'arrow-ios-upward-outline' : 'arrow-ios-downward-outline'"></nb-icon>
+    </div>
+    <div *ngIf="boiclicked == true" class="selectMenu m-0 p-0">
+        <p class="links pointer row m-0 pt-1 pb-1 ps-5 links" [ngClass]="{'active-link':menuLink=='/sow/boi'}" routerLink="/sow/boi" routerLinkActive="active-link">BILL OF MATERIALS </p>
+        <!-- <p class="links pointer row m-0 pt-1 pb-1 ps-5 links" [ngClass]="{'active-link':menuLink=='/sow/chart'}" routerLink="/sow/chart" routerLinkActive="active-link">RISK </p> -->
+    </div>
+</div>

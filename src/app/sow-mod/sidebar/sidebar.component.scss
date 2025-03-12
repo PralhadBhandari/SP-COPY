@@ -1,0 +1,25 @@
+.green-border-card {
+    border-radius: 15px;
+    border-top: 5px solid #3dcd58;
+    box-shadow: rgb(209, 209, 218) 0px 3px 3px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+p {
+    margin-bottom: 0px !important;
+    font-size: small;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.active-link {
+    background-color: #3dcd58;
+    color: white;
+}
+
+.control-status-example {
+    color: nb-theme(color-basic-100);
+}

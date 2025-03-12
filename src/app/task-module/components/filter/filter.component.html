@@ -1,0 +1,82 @@
+<div class="cardContainer ps-3 pb-3 pt-3  border-bottom">
+    <input nbInput placeholder="Search all filters" style="height: 2.3rem; width: 16.5rem;" (change)="openGlobalSearch($event)" halfWidth [(ngModel)]="globalSearchInput">
+    <nb-icon style=" margin-left: -23px; margin-top: 5px;" *ngIf="globalSearchInput!=='' " icon="close-outline" (click)="clearAll(); $event.preventDefault();"></nb-icon>
+    <nb-icon [ngClass]="{'marginSearch':globalSearchInput!== null}" class="pointers ms-2 me-1" icon="search" nbTooltip="Search" (click)="openGlobalSearch($event); collapseUnmatched()" nbTooltipStatus="primary" style="color: #3dcd58;" size="tiny"></nb-icon>
+    <nb-icon class="pointer ms-1 me-1" icon="arrowhead-down-outline" nbTooltip="Expand All" nbTooltipStatus="primary" (click)="openAll()"></nb-icon>
+    <nb-icon class="pointer ms-1 me-1" icon="arrowhead-up-outline" nbTooltip="Collapse All" nbTooltipStatus="primary" (click)="closeAll()"></nb-icon>
+</div>
+
+<div class="cardContainer">
+    <div class="cardDiv" *ngFor="let filterData of filter_List ,let i=index">
+        <div class=" filterHeader">
+            <nb-accordion multi>
+                <nb-accordion-item>
+                    <nb-accordion-item-header #item>
+                        <div class="row pe-3 pt-0 w-100 d-flex align-items-center justify-content-between" *ngIf="filterData.togglefindSearch">
+                            <div class="col-11 d-flex">
+                                <input nbInput status="success" plFaceholder="Filter Search here" style="width: 18rem; height:2rem" (click)="$event.preventDefault();$event.stopPropagation()" name="findInput-{{i}}" [(ngModel)]="filterData.findInput" halfWidth>
+                                <nb-icon style="    margin-left: -28px; margin-top: 5px;" icon="close-outline" (click)="clearSearch();toggleSearch(filterData); $event.preventDefault();"></nb-icon>
+                            </div>
+                            <div class="col-1 d-flex align-items-center justify-content-center">
+                                <nb-icon class="pointer" icon="funnel-outline" nbTooltip="Click to show filter List" nbTooltipStatus="primary" (click)="toggleSearch(filterData);openGlobalSearch($event)"></nb-icon>
+                            </div>
+                        </div>
+                        <div class="row pe-3 w-100 d-flex align-items-center justify-content-between" *ngIf="!filterData.togglefindSearch">
+                            <div class="col-10">
+                                <p><b>{{ filterData.filter_Display_Name }}</b></p>
+                            </div>
+                            <div class="col-2">
+                                <div class="row">
+                                    <div class="col-6 d-flex align-items-center justify-content-center">
+                                        <nb-icon class="pointer" style="color: #3dcd58;" [icon]="filterData.favorite? 'star' : 'star-outline'" (click)="toggleFavoriteIcon(filterData);$event.stopPropagation() " [nbTooltip]="getTooltip(filterData)" nbTooltipStatus="primary" id="pop"></nb-icon>
+                                    </div>
+                                    <div class="col-6 d-flex align-items-center justify-content-center">
+                                        <nb-icon class="pointer" icon="funnel-outline" nbTooltip="Click to show filter List" nbTooltipStatus="primary" (click)="toggleSearch(filterData);openGlobalSearch($event)"></nb-icon>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </nb-accordion-item-header>
+                    <nb-accordion-item-body #item class="overflow ">
+                        <div class="filterDropdown" [ngClass]="{'demoClass':globalSearchInput==null  }" style="height: 10rem;">
+                            <li style="list-style-type: none;" *ngFor="let item of filterData.filter_List ">
+                                <div class="list-item" *ngIf="(!filterData?.togglefindSearch || item?.value?.toLowerCase()?.includes(globalSearchInput?.toLowerCase()?.trim()))
+                                           && (!filterData?.findInput || item?.value?.toLowerCase()?.includes(filterData?.findInput?.toLowerCase()?.trim()))
+                                            && (globalSearchFlag==true || item?.value?.toLowerCase()?.includes(globalSearchInput?.toLowerCase()?.trim()))  ">
+                                    <!-- If findInput is empty, the condition evaluates to true, findInput has a value, the condition checks whether the lowercase value property of item  -->
+                                    <div *ngIf="filterData.favorite ">
+                                        <div *ngIf="item.favorite">
+                                            <div class="d-flex align-items-center  " *ngIf="!filterData.togglefindSearch">
+                                                <div style="display: flex;">
+                                                    <nb-checkbox></nb-checkbox>
+                                                    <span style="padding-inline-start: 1rem "> {{ item.value}} </span>
+                                                    <nb-icon class="pointer" style="color: #3dcd58;" [icon]="item.favorite ? 'star' : 'star-outline'" (click)="unfav(item);openGlobalSearch($event)" [nbTooltip]="getTooltip(item)" nbTooltipStatus="primary" class="star1"></nb-icon>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- </div> -->
+                                    </div>
+                                    <div *ngIf="!filterData.favorite">
+                                        <div style="display: flex;">
+                                            <nb-checkbox status="basic" id="checkbox"></nb-checkbox>
+                                            <span style="padding-inline-start: 1rem;  ">{{ item.value}} </span>
+                                            <nb-icon class="pointer" style="color: #3dcd58;" [icon]="item.favorite? 'star': 'star-outline'" (click)="unfav(item);openGlobalSearch($event)" [nbTooltip]="getTooltip(item)" nbTooltipStatus="primary" class="star1"></nb-icon>
+                                        </div>
+                                    </div>
+                                    <div *ngIf="filterData.favorite && filterData.togglefindSearch && item.favorite===true">
+                                        <div style="display: flex;">
+                                            <nb-checkbox status="basic" id="checkbox"></nb-checkbox>
+                                            <span style="padding-inline-start: 1rem;  ">{{ item.value}} </span>
+                                            <nb-icon class="pointer" style="color: #3dcd58;" [icon]="item.favorite? 'star': 'star-outline'" (click)="unfav(item);openGlobalSearch($event)" [nbTooltip]="getTooltip(item)" nbTooltipStatus="primary" class="star1"></nb-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                    </nb-accordion-item-body>
+                </nb-accordion-item>
+            </nb-accordion>
+        </div>
+    </div>
+</div>

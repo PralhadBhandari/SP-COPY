@@ -1,0 +1,16 @@
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+@media (width <=1052px) {
+    #companyName {
+        /* Style away! */
+        margin-left: 3rem;
+    }
+}
+
+.pointer {
+    cursor: pointer;
+}
